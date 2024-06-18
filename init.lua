@@ -195,7 +195,7 @@ vim.keymap.set('n', '<leader>ww', '<C-w>w', { desc = 'Switch [W]indow' })
 vim.keymap.set('n', '<leader>wc', '<C-w>c', { desc = '[C]lose window' })
 vim.keymap.set('n', '<leader>w+', '<C-w>+', { desc = 'Increase size' })
 vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Decrease size' })
-
+vim.keymap.set('n', '<leader>ws', '<CMD>split<CR>', { desc = 'Split Veritical' })
 -- vim.keymap.set('n', '<leader>wh', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 -- vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 -- vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
