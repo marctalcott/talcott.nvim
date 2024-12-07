@@ -27,7 +27,7 @@ return {
     local dap, dapui = require 'dap', require 'dapui'
     dap.adapters.coreclr = {
       type = 'executable',
-      command = 'netcoredbg',
+      command = '/Users/marctalcott/netcoredbg/bin/netcoredbg',
       args = { '--interpreter=vscode' },
     }
 
@@ -36,10 +36,11 @@ return {
         type = 'coreclr',
         name = 'launch - netcoredbg',
         request = 'launch',
-        program = function()
-          --         return vim.fn.input('Path to dll:', '/Users/marctalcott/Documents/Projects/DotNetProjects/HelloWorld/bin/Debug/net8.0/', 'file')
-          return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
-        end,
+        program = '/Users/marctalcott/RiderProjects/SimplestConsole/SimplestConsole/bin/Debug/net8.0/SimplestConsole.dll',
+        --program = function()
+        --     --    return vim.fn.input('Path to dll:', '/Users/marctalcott/Documents/Projects/DotNetProjects/HelloWorld/bin/Debug/net8.0/', 'file')
+        -- return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
+        --end,
         console = 'integratedTerminal',
       },
     }
