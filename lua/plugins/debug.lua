@@ -27,16 +27,20 @@ return {
     local dap, dapui = require 'dap', require 'dapui'
     dap.adapters.coreclr = {
       type = 'executable',
-      command = '/Users/marctalcott/netcoredbg/bin/netcoredbg',
+      command = '/Users/marctalcott/netcoredbg/netcoredbg/netcoredbg',
       args = { '--interpreter=vscode' },
     }
 
+    --usefule for debugging issues with dap
+    -- Logs are writent to :lua print(vim.fn.stdpath('cache'))
+    dap.set_log_level 'DEBUG' -- DEBUG or TRACE for more info
     dap.configurations.cs = {
       {
         type = 'coreclr',
         name = 'launch - netcoredbg',
         request = 'launch',
-        program = '/Users/marctalcott/RiderProjects/SimplestConsole/SimplestConsole/bin/Debug/net8.0/SimplestConsole.dll',
+        --        program = '/Users/marctalcott/RiderProjects/InternalDeveloperPlatform/src/Port.API.Commands/bin/Debug/net8.0/SimplestConsole.dll',
+        program = '/Users/marctalcott/RiderProjects/InternalDeveloperPlatform/src/Port.API.Commands/bin/Debug/net8.0/Port.API.Commands.dll',
         --program = function()
         --     --    return vim.fn.input('Path to dll:', '/Users/marctalcott/Documents/Projects/DotNetProjects/HelloWorld/bin/Debug/net8.0/', 'file')
         -- return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')

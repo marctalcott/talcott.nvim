@@ -6,9 +6,9 @@ return {
     -- Setup orgmode
     require('orgmode').setup {
       org_agenda_files = {
-        '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarcsDailyNotes/**/*',
+        '~/Obsidian/MarcsDailyNotes/**/*',
       },
-      org_default_notes_file = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarcsDailyNotes/inbox/refile.org',
+      org_default_notes_file = '~/Obsidian/MarcsDailyNotes/inbox/refile.org',
       org_capture_templates = {
         t = {
           description = 'Todo',
@@ -16,7 +16,7 @@ return {
             tree_type = 'day',
           },
           template = '**** TODO %?\n     Entered on: %U\n',
-          target = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarcsDailyNotes/tasks/tasks.org',
+          target = '~/Obsidian/MarcsDailyNotes/tasks/tasks.org',
         },
       },
     }
