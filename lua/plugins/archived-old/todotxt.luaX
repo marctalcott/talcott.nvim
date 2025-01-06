@@ -1,0 +1,10 @@
+return {
+  'arnarg/todotxt.nvim',
+  dependencies = { 'MunifTanjim/nui.nvim', lazy = true },
+  config = function()
+    todo_file = '/path/to/todo.txt'
+    --  require('todotxt-nvim').setup() {
+    --    todo_file = '/path/to/todo.txt',
+    --  }
+  end,
+}
