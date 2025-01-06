@@ -36,11 +36,11 @@ return {
         type = 'coreclr',
         name = 'launch - netcoredbg',
         request = 'launch',
-        program = '/Users/marctalcott/RiderProjects/SimplestConsole/SimplestConsole/bin/Debug/net8.0/SimplestConsole.dll',
-        --program = function()
-        --     --    return vim.fn.input('Path to dll:', '/Users/marctalcott/Documents/Projects/DotNetProjects/HelloWorld/bin/Debug/net8.0/', 'file')
-        -- return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
-        --end,
+        --        program = '/Users/marctalcott/RiderProjects/SimplestConsole/SimplestConsole/bin/Debug/net8.0/SimplestConsole.dll',
+        program = function()
+          --    return vim.fn.input('Path to dll:', '/Users/marctalcott/Documents/Projects/DotNetProjects/HelloWorld/bin/Debug/net8.0/', 'file')
+          return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
+        end,
         console = 'integratedTerminal',
       },
     }
