@@ -349,7 +349,7 @@ return {
     --
     -- for review workflow
     -- move file in current buffer to zettelkasten folder
-    vim.keymap.set('n', '<leader>ok', ":!mv '%:p' ~/Obsidian/MarcsDailyNotes/zettelkasten/<cr>:bd<cr>")
+    vim.keymap.set('n', '<leader>ok', ":!mv '%:p' ~/Obsidian/MarcsDailyNotes/zettelkasten/<cr> :bd<cr>")
     -- delete file in current buffer
     vim.keymap.set('n', '<leader>odd', ":!rm '%:p'<cr>:bd<cr>")
   end,
